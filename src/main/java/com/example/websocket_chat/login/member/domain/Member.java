@@ -21,18 +21,11 @@ public class Member {
     private String password;
 
     @Builder
-    private Member(Long id, String username, String userId, String password) {
+    public Member(Long id, String username, String userId, String password) {
         this.id = id;
         this.username = username;
         this.userId = userId;
         this.password = password;
     }
 
-    @Builder
-    public static Member of(String username, String userId, String password) {
-        return Member.builder()
-                .username(username)
-                .userId(userId)
-                .password(password).build();
-    }
 }
